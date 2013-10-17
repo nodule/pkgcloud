@@ -14,10 +14,14 @@
       "ports": {
         "input": {
           "key": {
-            "type": "string"
+            "title": "Key",
+            "type": "string",
+            "required": true
           },
           "keyId": {
-            "type": "string"
+            "title": "Key ID",
+            "type": "string",
+            "required": true
           }
         },
         "output": {
@@ -27,6 +31,7 @@
         }
       },
       "description": "Amazon Credentials",
+      "title": "Amazon Credentials",
       "ns": "pkgcloud",
       "name": "amazon",
       "fn": "output = input\noutput.provider = \"amazon\"\n"
@@ -47,7 +52,8 @@
         "input": {
           "credentials": {
             "title": "Credentials",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -70,11 +76,44 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           },
           "options": {
             "title": "Options",
             "type": "object",
+            "required": true
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "container": {
+            "title": "Container",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Create a Storage Container",
+      "title": "Create Storage Container",
+      "ns": "pkgcloud",
+      "name": "createContainer",
+      "fn": "output = [client, 'createContainer', input.options] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object",
+            "required": true
+          },
+          "options": {
+            "title": "Options",
+            "type": "object",
+            "required": true,
             "name": {
               "title": "Image Name",
               "type": "string",
@@ -109,11 +148,13 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           },
           "options": {
             "title": "Options",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -138,7 +179,8 @@
         "input": {
           "credentials": {
             "title": "Credentials",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -161,7 +203,35 @@
         "input": {
           "client": {
             "title": "Client",
+            "type": "object",
+            "required": true
+          },
+          "containerName": {
+            "title": "Container name",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
             "type": "object"
+          }
+        }
+      },
+      "description": "Destroy a Storage Container",
+      "title": "Destroy Storage Container",
+      "ns": "pkgcloud",
+      "name": "destroyContainer",
+      "fn": "output = [client, 'destroyContainer', input.containerName] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object",
+            "required": true
           },
           "image": {
             "title": "Image",
@@ -191,11 +261,13 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           },
           "server": {
             "title": "Server",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -220,7 +292,8 @@
         "input": {
           "credentials": {
             "title": "Credentials",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -243,11 +316,173 @@
         "input": {
           "client": {
             "title": "Client",
+            "type": "object",
+            "required": true
+          },
+          "options": {
+            "title": "Options",
+            "type": "object",
+            "container": {
+              "title": "Container name",
+              "type": "string",
+              "required": true
+            },
+            "remote": {
+              "title": "Remote filename",
+              "type": "string",
+              "required": true
+            }
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
             "type": "object"
+          }
+        }
+      },
+      "description": "Downloads a file from storage",
+      "title": "Download file",
+      "ns": "pkgcloud",
+      "name": "download",
+      "fn": "output = { upload: client.upload(input.options) }\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object",
+            "required": true
+          },
+          "containerName": {
+            "title": "Container name",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "container": {
+            "title": "Container",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Get a Storage Container",
+      "title": "Get Storage Container",
+      "ns": "pkgcloud",
+      "name": "getContainer",
+      "fn": "output = [client, 'getContainer', input.containerName] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "containers": {
+            "title": "Containers",
+            "type": "array"
+          }
+        }
+      },
+      "description": "Get Storage Containers",
+      "title": "Get Storage Containers",
+      "ns": "pkgcloud",
+      "name": "getContainers",
+      "fn": "output = [client, 'getContainers'] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object",
+            "required": true
+          },
+          "container": {
+            "title": "Container",
+            "type": "object",
+            "required": true
+          },
+          "file": {
+            "title": "File",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "server": {
+            "title": "Server",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Get Files",
+      "title": "Get Files",
+      "ns": "pkgcloud",
+      "name": "getFiles",
+      "fn": "output = [client, 'getFile', input.container, input.file] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object",
+            "required": true
+          },
+          "container": {
+            "title": "Container",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "files": {
+            "title": "Files",
+            "type": "array"
+          }
+        }
+      },
+      "description": "Get Files",
+      "title": "Get Files",
+      "ns": "pkgcloud",
+      "name": "getFiles",
+      "fn": "output = [client, 'getFiles', input.container] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object",
+            "required": true
           },
           "flavor": {
             "title": "Flavor",
-            "type": "string"
+            "type": "string",
+            "required": true
           }
         },
         "output": {
@@ -272,7 +507,8 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -297,11 +533,13 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           },
           "image": {
             "title": "ImageID",
-            "type": "string"
+            "type": "string",
+            "required": true
           }
         },
         "output": {
@@ -326,7 +564,8 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -351,7 +590,8 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -376,11 +616,13 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           },
           "server": {
             "title": "Server",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -405,7 +647,8 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -430,7 +673,8 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -455,11 +699,13 @@
         "input": {
           "username": {
             "title": "Username",
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "password": {
             "title": "Password",
-            "type": "password"
+            "type": "password",
+            "required": true
           }
         },
         "output": {
@@ -479,11 +725,13 @@
         "input": {
           "username": {
             "title": "Username",
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "password": {
             "title": "Password",
-            "type": "password"
+            "type": "password",
+            "required": true
           }
         },
         "output": {
@@ -503,11 +751,13 @@
         "input": {
           "username": {
             "title": "Username",
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "password": {
             "title": "Password",
-            "type": "password"
+            "type": "password",
+            "required": true
           }
         },
         "output": {
@@ -527,11 +777,13 @@
         "input": {
           "username": {
             "title": "Username",
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "password": {
             "title": "Password",
-            "type": "password"
+            "type": "password",
+            "required": true
           }
         },
         "output": {
@@ -551,11 +803,13 @@
         "input": {
           "username": {
             "title ": "Username",
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "apiKey": {
             "title ": "API Key",
-            "type": "string"
+            "type": "string",
+            "required": true
           }
         },
         "output": {
@@ -575,11 +829,13 @@
         "input": {
           "client": {
             "title": "Client",
-            "type": "object"
+            "type": "object",
+            "required": true
           },
           "server": {
             "title": "Server",
-            "type": "object"
+            "type": "object",
+            "required": true
           },
           "type": {
             "title": "Reboot Type",
@@ -607,11 +863,13 @@
         "input": {
           "username": {
             "title": "Username",
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "password": {
             "title": "Password",
-            "type": "password"
+            "type": "password",
+            "required": true
           }
         },
         "output": {
@@ -629,9 +887,42 @@
     {
       "ports": {
         "input": {
+          "client": {
+            "title": "Client",
+            "type": "object",
+            "required": true
+          },
+          "container": {
+            "title": "Container",
+            "type": "object",
+            "required": true
+          },
+          "file": {
+            "title": "File",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Remove a File",
+      "title": "Remove File",
+      "ns": "pkgcloud",
+      "name": "removeFile",
+      "fn": "output = [client, 'removeFile', input.container, input.file] \n"
+    },
+    {
+      "ports": {
+        "input": {
           "credentials": {
             "title": "Credentials",
-            "type": "object"
+            "type": "object",
+            "required": true
           }
         },
         "output": {
@@ -648,6 +939,42 @@
       "ns": "pkgcloud",
       "name": "storage",
       "fn": "output = { client: pkgcloud.storage.createClient(input.credentials) }\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object",
+            "required": true
+          },
+          "options": {
+            "title": "Options",
+            "type": "object",
+            "container": {
+              "title": "Container name",
+              "type": "string",
+              "required": true
+            },
+            "remote": {
+              "title": "Remote filename",
+              "type": "string",
+              "required": true
+            }
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Uploads a file to storage",
+      "title": "Upload file",
+      "ns": "pkgcloud",
+      "name": "upload",
+      "fn": "output = { upload: client.upload(input.options) }\n"
     }
   ],
   "twigs": []
