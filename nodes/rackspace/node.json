@@ -7,11 +7,13 @@
     "input": {
       "username": {
         "title ": "Username",
-        "type": "string"
+        "type": "string",
+        "required": true
       },
       "apiKey": {
         "title ": "API Key",
-        "type": "string"
+        "type": "string",
+        "required": true
       }
     },
     "output": {

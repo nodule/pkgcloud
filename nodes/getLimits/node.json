@@ -7,7 +7,8 @@
     "input": {
       "client": {
         "title": "Client",
-        "type": "object"
+        "type": "object",
+        "required": true
       }
     },
     "output": {

@@ -1,8 +1,8 @@
 {
-  "name": "destroyImage",
+  "name": "getFiles",
   "ns": "pkgcloud",
-  "title": "Destroy Image",
-  "description": "Destroy Image",
+  "title": "Get Files",
+  "description": "Get Files",
   "ports": {
     "input": {
       "client": {
@@ -10,8 +10,8 @@
         "type": "object",
         "required": true
       },
-      "image": {
-        "title": "Image",
+      "container": {
+        "title": "Container",
         "type": "object",
         "required": true
       }
@@ -21,9 +21,9 @@
         "title": "Error",
         "type": "object"
       },
-      "success": {
-        "title": "Success",
-        "type": "object"
+      "files": {
+        "title": "Files",
+        "type": "array"
       }
     }
   }

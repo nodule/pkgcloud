@@ -7,11 +7,13 @@
     "input": {
       "client": {
         "title": "Client",
-        "type": "object"
+        "type": "object",
+        "required": true
       },
       "server": {
         "title": "Server",
-        "type": "object"
+        "type": "object",
+        "required": true
       }
     },
     "output": {

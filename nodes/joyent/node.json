@@ -7,11 +7,13 @@
     "input": {
       "username": {
         "title": "Username",
-        "type": "string"
+        "type": "string",
+        "required": true
       },
       "password": {
         "title": "Password",
-        "type": "password"
+        "type": "password",
+        "required": true
       }
     },
     "output": {

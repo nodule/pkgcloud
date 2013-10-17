@@ -1,8 +1,8 @@
 {
-  "name": "createImage",
+  "name": "download",
   "ns": "pkgcloud",
-  "title": "Create Image",
-  "description": "Create Image",
+  "title": "Download file",
+  "description": "Downloads a file from storage",
   "ports": {
     "input": {
       "client": {
@@ -13,14 +13,13 @@
       "options": {
         "title": "Options",
         "type": "object",
-        "required": true
-        "name": {
-          "title": "Image Name",
+        "container": {
+          "title": "Container name",
           "type": "string",
           "required": true
         },
-        "server": {
-          "title": "Server ID",
+        "remote": {
+          "title": "Remote filename",
           "type": "string",
           "required": true
         }
@@ -29,10 +28,6 @@
     "output": {
       "err": {
         "title": "Error",
-        "type": "object"
-      },
-      "image": {
-        "title": "Image",
         "type": "object"
       }
     }

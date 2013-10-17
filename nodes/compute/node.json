@@ -10,7 +10,8 @@
     "input": {
       "credentials": {
         "title": "Credentials",
-        "type": "object"
+        "type": "object",
+        "required": true
       }
     },
     "output": {

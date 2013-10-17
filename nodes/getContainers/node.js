@@ -1,0 +1,1 @@
+output = [client, 'getContainers'] 

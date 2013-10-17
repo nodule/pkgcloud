@@ -1,14 +1,19 @@
 {
   "name": "amazon",
   "ns": "pkgcloud",
+  "title": "Amazon Credentials",
   "description": "Amazon Credentials",
   "ports": {
     "input": {
       "key": {
-        "type": "string"
+        "title": "Key",
+        "type": "string",
+        "required": true
       },
       "keyId": {
-        "type": "string"
+        "title": "Key ID",
+        "type": "string",
+        "required": true
       }
     },
     "output": {

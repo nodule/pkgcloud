@@ -1,8 +1,8 @@
 {
-  "name": "createServer",
+  "name": "upload",
   "ns": "pkgcloud",
-  "title": "Create a Server",
-  "description": "Creates a server",
+  "title": "Upload file",
+  "description": "Uploads a file to storage",
   "ports": {
     "input": {
       "client": {
@@ -13,16 +13,21 @@
       "options": {
         "title": "Options",
         "type": "object",
-        "required": true
+        "container": {
+          "title": "Container name",
+          "type": "string",
+          "required": true
+        },
+        "remote": {
+          "title": "Remote filename",
+          "type": "string",
+          "required": true
+        }
       }
     },
     "output": {
       "err": {
         "title": "Error",
-        "type": "object"
-      },
-      "server": {
-        "title": "Server",
         "type": "object"
       }
     }
