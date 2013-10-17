@@ -1,0 +1,28 @@
+{
+  "name": "createServer",
+  "ns": "pkgcloud",
+  "title": "Create a Server",
+  "description": "Creates a server",
+  "ports": {
+    "input": {
+      "client": {
+        "title": "Client",
+        "type": "object"
+      },
+      "options": {
+        "title": "Options",
+        "type": "object"
+      }
+    },
+    "output": {
+      "err": {
+        "title": "Error",
+        "type": "object"
+      },
+      "server": {
+        "title": "Server",
+        "type": "object"
+      }
+    }
+  }
+}

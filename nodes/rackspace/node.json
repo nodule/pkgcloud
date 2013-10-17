@@ -1,0 +1,23 @@
+{
+  "name": "rackspace",
+  "ns": "pkgcloud",
+  "title": "Rackspace Credentials",
+  "description": "Rackspace Credentials",
+  "ports": {
+    "input": {
+      "username": {
+        "title ": "Username",
+        "type": "string"
+      },
+      "apiKey": {
+        "title ": "API Key",
+        "type": "string"
+      }
+    },
+    "output": {
+      "credentials": {
+        "type": "object"
+      }
+    }
+  }
+}

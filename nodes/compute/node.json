@@ -1,0 +1,19 @@
+{
+  "name": "compute",
+  "ns": "pkgcloud",
+  "title": "Compute",
+  "description": "The pkgcloud.compute service is designed to make it easy to provision and work with VMs.",
+  "ports": {
+    "input": {
+      "credentials": {
+        "title": "Credentials",
+        "type": "object"
+      }
+    },
+    "output": {
+      "client": {
+        "type": "object"
+      }
+    }
+  }
+}

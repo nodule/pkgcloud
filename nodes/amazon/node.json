@@ -1,0 +1,20 @@
+{
+  "name": "amazon",
+  "ns": "pkgcloud",
+  "description": "Amazon Credentials",
+  "ports": {
+    "input": {
+      "key": {
+        "type": "string"
+      },
+      "keyId": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "credentials": {
+        "type": "object"
+      }
+    }
+  }
+}

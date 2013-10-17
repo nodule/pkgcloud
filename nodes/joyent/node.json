@@ -1,0 +1,23 @@
+{
+  "name": "joyent",
+  "ns": "pkgcloud",
+  "title": "Joyent Credentials",
+  "description": "Joyent requires a username / password or key / keyId combo. The key / keyId should be registered in Joyent servers",
+  "ports": {
+    "input": {
+      "username": {
+        "title": "Username",
+        "type": "string"
+      },
+      "password": {
+        "title": "Password",
+        "type": "string"
+      }
+    },
+    "output": {
+      "credentials": {
+        "type": "object"
+      }
+    }
+  }
+}

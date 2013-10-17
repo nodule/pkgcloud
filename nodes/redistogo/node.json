@@ -1,0 +1,23 @@
+{
+  "name": "redistogo",
+  "ns": "pkgcloud",
+  "title": "RedisToGo Credentials",
+  "description": "RedisToGo Credentials",
+  "ports": {
+    "input": {
+      "username": {
+        "title": "Username",
+        "type": "string"
+      },
+      "password": {
+        "title": "Password",
+        "type": "string"
+      }
+    },
+    "output": {
+      "credentials": {
+        "type": "object"
+      }
+    }
+  }
+}
