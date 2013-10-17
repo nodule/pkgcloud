@@ -1,0 +1,24 @@
+{
+  "name": "getVersion",
+  "ns": "pkgcloud",
+  "title": "Server Version",
+  "description": "Get the server version",
+  "ports": {
+    "input": {
+      "client": {
+        "title": "Client",
+        "type": "object"
+      }
+    },
+    "output": {
+      "err": {
+        "title": "Error",
+        "type": "object"
+      },
+      "version": {
+        "title": "Version",
+        "type": "string"
+      }
+    }
+  }
+}

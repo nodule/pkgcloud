@@ -1,0 +1,29 @@
+{
+  "name": "destroyImage",
+  "ns": "pkgcloud",
+  "title": "Destroy Image",
+  "description": "Destroy Image",
+  "ports": {
+    "input": {
+      "client": {
+        "title": "Client",
+        "type": "object"
+      },
+      "image": {
+        "title": "Image",
+        "type": "object",
+        "required": true
+      }
+    },
+    "output": {
+      "err": {
+        "title": "Error",
+        "type": "object"
+      },
+      "success": {
+        "title": "Success",
+        "type": "object"
+      }
+    }
+  }
+}

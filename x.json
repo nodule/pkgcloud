@@ -1,0 +1,654 @@
+{
+  "name": "pkgcloud",
+  "description": "Pkgcloud components for Chiχ",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/pkgcloud.git"
+  },
+  "dependencies": {
+    "pkgcloud": "0.x.x"
+  },
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "key": {
+            "type": "string"
+          },
+          "keyId": {
+            "type": "string"
+          }
+        },
+        "output": {
+          "credentials": {
+            "type": "object"
+          }
+        }
+      },
+      "description": "Amazon Credentials",
+      "ns": "pkgcloud",
+      "name": "amazon",
+      "fn": "output = input\noutput.provider = \"amazon\"\n"
+    },
+    {
+      "ports": {
+        "input": {},
+        "output": {}
+      },
+      "description": "See: [using compute](https://github.com/nodejitsu/pkgcloud/blob/master/docs/providers/azure.md#using-compute)",
+      "title": "Azure Credentials",
+      "ns": "pkgcloud",
+      "name": "azure",
+      "fn": "/* TODO: a bit ugly this, we don't really need a .js here\noutput = input\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "credentials": {
+            "title": "Credentials",
+            "type": "object"
+          }
+        },
+        "output": {
+          "client": {
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "pkgcloud": "0.x.x"
+      },
+      "description": "The pkgcloud.compute service is designed to make it easy to provision and work with VMs.",
+      "title": "Compute",
+      "ns": "pkgcloud",
+      "name": "compute",
+      "fn": "output = { client: pkgcloud.compute.createClient(input.credentials) }\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          },
+          "options": {
+            "title": "Options",
+            "type": "object",
+            "name": {
+              "title": "Image Name",
+              "type": "string",
+              "required": true
+            },
+            "server": {
+              "title": "Server ID",
+              "type": "string",
+              "required": true
+            }
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "image": {
+            "title": "Image",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Create Image",
+      "title": "Create Image",
+      "ns": "pkgcloud",
+      "name": "createImage",
+      "fn": "output = [client, 'createImage', input.options] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          },
+          "options": {
+            "title": "Options",
+            "type": "object"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "server": {
+            "title": "Server",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Creates a server",
+      "title": "Create a Server",
+      "ns": "pkgcloud",
+      "name": "createServer",
+      "fn": "output = [client, 'createServer'] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "credentials": {
+            "title": "Credentials",
+            "type": "object"
+          }
+        },
+        "output": {
+          "client": {
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "pkgcloud": "0.x.x"
+      },
+      "description": "The pkgcloud.database service is designed to consistently work with a variety of Database-as-a-Service (DBaaS) providers.",
+      "title": "Database",
+      "ns": "pkgcloud",
+      "name": "database",
+      "fn": "output = { client: pkgcloud.database.createClient(input.credentials) }\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          },
+          "image": {
+            "title": "Image",
+            "type": "object",
+            "required": true
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "success": {
+            "title": "Success",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Destroy Image",
+      "title": "Destroy Image",
+      "ns": "pkgcloud",
+      "name": "destroyImage",
+      "fn": "output = [client, 'destroyImage', input.image] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          },
+          "server": {
+            "title": "Server",
+            "type": "object"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "serverId": {
+            "title": "Server ID",
+            "type": "string"
+          }
+        }
+      },
+      "description": "Destroys a server",
+      "title": "Destroy Server",
+      "ns": "pkgcloud",
+      "name": "destroyServer",
+      "fn": "output = [client, 'destroyServer', input.server] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "credentials": {
+            "title": "Credentials",
+            "type": "object"
+          }
+        },
+        "output": {
+          "client": {
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "pkgcloud": "0.x.x"
+      },
+      "description": "The pkgcloud.dns service is designed to make it easy to manage DNS zones and records on various infrastructure providers.",
+      "title": "Dns",
+      "ns": "pkgcloud",
+      "name": "dns",
+      "fn": "output = { client: pkgcloud.dns.createClient(input.credentials) }\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          },
+          "flavor": {
+            "title": "Flavor",
+            "type": "string"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "flavor": {
+            "title": "Flavor",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Get Flavor",
+      "title": "Get Flavor",
+      "ns": "pkgcloud",
+      "name": "getFlavor",
+      "fn": "output = [client, 'getFlavor', input.flavor] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "flavors": {
+            "title": "Flavors",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Get API limits",
+      "title": "API Limits",
+      "ns": "pkgcloud",
+      "name": "getLimits",
+      "fn": "output = [client, 'getFlavors'] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          },
+          "image": {
+            "title": "ImageID",
+            "type": "string"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "image": {
+            "title": "Image",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Get Image",
+      "title": "Get Image",
+      "ns": "pkgcloud",
+      "name": "getImage",
+      "fn": "output = [client, 'getImages'] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "images": {
+            "title": "Images",
+            "type": "array"
+          }
+        }
+      },
+      "description": "Get Images",
+      "title": "Get Images",
+      "ns": "pkgcloud",
+      "name": "getImages",
+      "fn": "output = [client, 'getImages'] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "limits": {
+            "title": "Limits",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Get API limits",
+      "title": "API Limits",
+      "ns": "pkgcloud",
+      "name": "getLimits",
+      "fn": "output = [client, 'getLimits'] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          },
+          "server": {
+            "title": "Server",
+            "type": "object"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "serverId": {
+            "title": "Server ID",
+            "type": "string"
+          }
+        }
+      },
+      "description": "Get a server",
+      "title": "Get Server",
+      "ns": "pkgcloud",
+      "name": "getServer",
+      "fn": "output = [client, 'getServer', input.server] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "version": {
+            "title": "Version",
+            "type": "string"
+          }
+        }
+      },
+      "description": "Get the server version",
+      "title": "Server Version",
+      "ns": "pkgcloud",
+      "name": "getVersion",
+      "fn": "output = [client, 'getVersion'] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          }
+        },
+        "output": {
+          "err": {
+            "title": "Error",
+            "type": "object"
+          },
+          "servers": {
+            "title": "An array of servers",
+            "type": "array"
+          }
+        }
+      },
+      "description": "Get servers for this compute",
+      "title": "Get Servers",
+      "ns": "pkgcloud",
+      "name": "getServers",
+      "fn": "output = [client, 'getServers'] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "username": {
+            "title": "Username",
+            "type": "string"
+          },
+          "password": {
+            "title": "Password",
+            "type": "string"
+          }
+        },
+        "output": {
+          "credentials": {
+            "type": "object"
+          }
+        }
+      },
+      "description": "In order to use IrisCOuch you will need to have created a valid account. ",
+      "title": "IrisCouch Credentials",
+      "ns": "pkgcloud",
+      "name": "iriscouch",
+      "fn": "output = input\noutput.provider = \"iriscouch\"\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "username": {
+            "title": "Username",
+            "type": "string"
+          },
+          "password": {
+            "title": "Password",
+            "type": "string"
+          }
+        },
+        "output": {
+          "credentials": {
+            "type": "object"
+          }
+        }
+      },
+      "description": "Joyent requires a username / password or key / keyId combo. The key / keyId should be registered in Joyent servers",
+      "title": "Joyent Credentials",
+      "ns": "pkgcloud",
+      "name": "joyent",
+      "fn": "output = input\noutput.provider = \"joyent\"\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "username": {
+            "title": "Username",
+            "type": "string"
+          },
+          "password": {
+            "title": "Password",
+            "type": "string"
+          }
+        },
+        "output": {
+          "credentials": {
+            "type": "object"
+          }
+        }
+      },
+      "description": "MongoHQ Credentials",
+      "title": "MongoHQ Credentials",
+      "ns": "pkgcloud",
+      "name": "mongohq",
+      "fn": "output = input\noutput.provider = \"mongohq\"\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "username": {
+            "title": "Username",
+            "type": "string"
+          },
+          "password": {
+            "title": "Password",
+            "type": "string"
+          }
+        },
+        "output": {
+          "credentials": {
+            "type": "object"
+          }
+        }
+      },
+      "description": "To create a database with MongoLab you will need first create an account and then use the created account as `owner` of the database.",
+      "title": "MongoLab Credentials",
+      "ns": "pkgcloud",
+      "name": "mongolab",
+      "fn": "output = input\noutput.provider = \"mongolab\"\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "username": {
+            "title ": "Username",
+            "type": "string"
+          },
+          "apiKey": {
+            "title ": "API Key",
+            "type": "string"
+          }
+        },
+        "output": {
+          "credentials": {
+            "type": "object"
+          }
+        }
+      },
+      "description": "Rackspace Credentials",
+      "title": "Rackspace Credentials",
+      "ns": "pkgcloud",
+      "name": "rackspace",
+      "fn": "output = input\noutput.provider = \"rackspace\"\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "client": {
+            "title": "Client",
+            "type": "object"
+          },
+          "server": {
+            "title": "Server",
+            "type": "object"
+          },
+          "type": {
+            "title": "Reboot Type",
+            "enum": [
+              "HARD",
+              "SOFT"
+            ]
+          }
+        },
+        "output": {
+          "result": {
+            "title": "Result",
+            "type": "object"
+          }
+        }
+      },
+      "description": "Reboots a server",
+      "title": "Reboot Server",
+      "ns": "pkgcloud",
+      "name": "rebootServer",
+      "fn": "output = [client, 'rebootServer', input.server, { type: input.type }] \n"
+    },
+    {
+      "ports": {
+        "input": {
+          "username": {
+            "title": "Username",
+            "type": "string"
+          },
+          "password": {
+            "title": "Password",
+            "type": "string"
+          }
+        },
+        "output": {
+          "credentials": {
+            "type": "object"
+          }
+        }
+      },
+      "description": "RedisToGo Credentials",
+      "title": "RedisToGo Credentials",
+      "ns": "pkgcloud",
+      "name": "redistogo",
+      "fn": "output = input\noutput.provider = \"redistogo\"\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "credentials": {
+            "title": "Credentials",
+            "type": "object"
+          }
+        },
+        "output": {
+          "client": {
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "pkgcloud": "0.x.x"
+      },
+      "description": "The pkgcloud.storage service is designed to make it easy to upload and download files to various infrastructure providers",
+      "title": "Storage",
+      "ns": "pkgcloud",
+      "name": "storage",
+      "fn": "output = { client: pkgcloud.storage.createClient(input.credentials) }\n"
+    }
+  ],
+  "twigs": []
+}

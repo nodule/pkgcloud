@@ -1,0 +1,28 @@
+{
+  "name": "rebootServer",
+  "ns": "pkgcloud",
+  "title": "Reboot Server",
+  "description": "Reboots a server",
+  "ports": {
+    "input": {
+      "client": {
+        "title": "Client",
+        "type": "object"
+      },
+      "server": {
+        "title": "Server",
+        "type": "object"
+      },
+      "type": {
+        "title": "Reboot Type",
+        "enum": ["HARD","SOFT"] 
+      }
+    },
+    "output": {
+      "result": {
+        "title": "Result",
+        "type": "object"
+      }
+    }
+  }
+}

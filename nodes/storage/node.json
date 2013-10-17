@@ -1,8 +1,8 @@
 {
-  "name": "compute",
+  "name": "storage",
   "ns": "pkgcloud",
-  "title": "Compute",
-  "description": "The pkgcloud.compute service is designed to make it easy to provision and work with VMs.",
+  "title": "Storage",
+  "description": "The pkgcloud.storage service is designed to make it easy to upload and download files to various infrastructure providers",
   "require": {
     "pkgcloud": "0.x.x"
   },

@@ -1,0 +1,28 @@
+{
+  "name": "getImage",
+  "ns": "pkgcloud",
+  "title": "Get Image",
+  "description": "Get Image",
+  "ports": {
+    "input": {
+      "client": {
+        "title": "Client",
+        "type": "object"
+      },
+      "image": {
+        "title": "ImageID",
+        "type": "string"
+      }
+    },
+    "output": {
+      "err": {
+        "title": "Error",
+        "type": "object"
+      },
+      "image": {
+        "title": "Image",
+        "type": "object"
+      }
+    }
+  }
+}

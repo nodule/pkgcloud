@@ -1,0 +1,28 @@
+{
+  "name": "destroyServer",
+  "ns": "pkgcloud",
+  "title": "Destroy Server",
+  "description": "Destroys a server",
+  "ports": {
+    "input": {
+      "client": {
+        "title": "Client",
+        "type": "object"
+      },
+      "server": {
+        "title": "Server",
+        "type": "object"
+      }
+    },
+    "output": {
+      "err": {
+        "title": "Error",
+        "type": "object"
+      },
+      "serverId": {
+        "title": "Server ID",
+        "type": "string"
+      }
+    }
+  }
+}

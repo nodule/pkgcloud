@@ -1,0 +1,28 @@
+{
+  "name": "getServer",
+  "ns": "pkgcloud",
+  "title": "Get Server",
+  "description": "Get a server",
+  "ports": {
+    "input": {
+      "client": {
+        "title": "Client",
+        "type": "object"
+      },
+      "server": {
+        "title": "Server",
+        "type": "object"
+      }
+    },
+    "output": {
+      "err": {
+        "title": "Error",
+        "type": "object"
+      },
+      "serverId": {
+        "title": "Server ID",
+        "type": "string"
+      }
+    }
+  }
+}

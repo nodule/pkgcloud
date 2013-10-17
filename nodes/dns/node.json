@@ -1,8 +1,8 @@
 {
-  "name": "compute",
+  "name": "dns",
   "ns": "pkgcloud",
-  "title": "Compute",
-  "description": "The pkgcloud.compute service is designed to make it easy to provision and work with VMs.",
+  "title": "Dns",
+  "description": "The pkgcloud.dns service is designed to make it easy to manage DNS zones and records on various infrastructure providers.",
   "require": {
     "pkgcloud": "0.x.x"
   },

@@ -1,0 +1,28 @@
+{
+  "name": "getFlavor",
+  "ns": "pkgcloud",
+  "title": "Get Flavor",
+  "description": "Get Flavor",
+  "ports": {
+    "input": {
+      "client": {
+        "title": "Client",
+        "type": "object"
+      },
+      "flavor": {
+        "title": "Flavor",
+        "type": "string"
+      }
+    },
+    "output": {
+      "err": {
+        "title": "Error",
+        "type": "object"
+      },
+      "flavor": {
+        "title": "Flavor",
+        "type": "object"
+      }
+    }
+  }
+}
