@@ -11,7 +11,7 @@
       },
       "password": {
         "title": "Password",
-        "type": "string"
+        "type": "password"
       }
     },
     "output": {
