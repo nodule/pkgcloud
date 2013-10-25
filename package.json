@@ -22,6 +22,7 @@
     "chit": "0.x.x"
   },
   "chix": {
-    "name": "pkgcloud"
+    "name": "pkgcloud",
+    "color": "rgb(150,79,39)"
   }
 }
