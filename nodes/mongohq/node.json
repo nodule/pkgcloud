@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "MongoHQ Credentials",
   "description": "MongoHQ Credentials",
+  "phrases": {
+    "active": "Creating MongoHQ Credentials"
+  },
   "ports": {
     "input": {
       "username": {

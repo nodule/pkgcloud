@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Database",
   "description": "The pkgcloud.database service is designed to consistently work with a variety of Database-as-a-Service (DBaaS) providers.",
+  "phrases": {
+    "active": "Creating database service"
+  },
   "require": {
     "pkgcloud": "0.x.x"
   },

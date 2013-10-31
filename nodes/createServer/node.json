@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Create a Server",
   "description": "Creates a server",
+  "phrases": {
+    "active": "Creating server"
+  },
   "ports": {
     "input": {
       "client": {

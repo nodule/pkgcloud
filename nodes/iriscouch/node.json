@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "IrisCouch Credentials",
   "description": "In order to use IrisCOuch you will need to have created a valid account. ",
+  "phrases": {
+    "active": "Creating IrisCouch Credentials"
+  },
   "ports": {
     "input": {
       "username": {

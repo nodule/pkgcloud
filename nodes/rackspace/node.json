@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Rackspace Credentials",
   "description": "Rackspace Credentials",
+  "phrases": {
+    "active": "Creating Rackspace Credentials"
+  },
   "ports": {
     "input": {
       "username": {

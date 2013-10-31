@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Reboot Server",
   "description": "Reboots a server",
+  "phrases": {
+    "active": "Rebooting server {{input.type}}"
+  },
   "ports": {
     "input": {
       "client": {

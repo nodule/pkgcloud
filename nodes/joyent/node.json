@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Joyent Credentials",
   "description": "Joyent requires a username / password or key / keyId combo. The key / keyId should be registered in Joyent servers",
+  "phrases": {
+    "active": "Creating Joyent Credentials"
+  },
   "ports": {
     "input": {
       "username": {

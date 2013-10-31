@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Server Version",
   "description": "Get the server version",
+  "phrases": {
+    "active": "Getting server version"
+  },
   "ports": {
     "input": {
       "client": {

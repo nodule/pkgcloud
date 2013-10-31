@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "API Limits",
   "description": "Get API limits",
+  "phrases": {
+    "active": "Getting API Limits"
+  },
   "ports": {
     "input": {
       "client": {

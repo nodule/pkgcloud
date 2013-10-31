@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Get Files",
   "description": "Get Files",
+  "phrases": {
+    "active": "Getting files from {{input.container}}"
+  },
   "ports": {
     "input": {
       "client": {

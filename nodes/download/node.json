@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Download file",
   "description": "Downloads a file from storage",
+  "phrases": {
+    "active": "Downloading {{input.options.remote}} from {{input.options.container}}"
+  },
   "ports": {
     "input": {
       "client": {

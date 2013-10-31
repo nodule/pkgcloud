@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Get Servers",
   "description": "Get servers for this compute",
+  "phrases": {
+    "active": "Getting servers for this compute"
+  },
   "ports": {
     "input": {
       "client": {

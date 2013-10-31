@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "MongoLab Credentials",
   "description": "To create a database with MongoLab you will need first create an account and then use the created account as `owner` of the database.",
+  "phrases": {
+    "active": "Creating MongoLab Credentials"
+  },
   "ports": {
     "input": {
       "username": {

@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Remove File",
   "description": "Remove a File",
+  "phrases": {
+    "active": "Removing file {{input.file}} from {{input.container}}"
+  },
   "ports": {
     "input": {
       "client": {

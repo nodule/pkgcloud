@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Destroy Image",
   "description": "Destroy Image",
+  "phrases": {
+    "active": "Destroying image"
+  },
   "ports": {
     "input": {
       "client": {

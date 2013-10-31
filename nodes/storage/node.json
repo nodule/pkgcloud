@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Storage",
   "description": "The pkgcloud.storage service is designed to make it easy to upload and download files to various infrastructure providers",
+  "phrases": {
+    "active": "Creating storage service"
+  },
   "require": {
     "pkgcloud": "0.x.x"
   },

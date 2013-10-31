@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Create Image",
   "description": "Create Image",
+  "phrases": {
+    "active": "Creating image"
+  },
   "ports": {
     "input": {
       "client": {

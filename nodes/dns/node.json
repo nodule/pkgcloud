@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Dns",
   "description": "The pkgcloud.dns service is designed to make it easy to manage DNS zones and records on various infrastructure providers.",
+  "phrases": {
+    "active": "Creating DNS service"
+  },
   "require": {
     "pkgcloud": "0.x.x"
   },

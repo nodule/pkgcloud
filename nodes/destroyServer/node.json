@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Destroy Server",
   "description": "Destroys a server",
+  "phrases": {
+    "active": "Destroying server"
+  },
   "ports": {
     "input": {
       "client": {

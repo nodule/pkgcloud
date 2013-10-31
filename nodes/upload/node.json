@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Upload file",
   "description": "Uploads a file to storage",
+  "phrases": {
+    "active": "Uploading {{input.options.remote}} to {{input.options.container}}"
+  },
   "ports": {
     "input": {
       "client": {

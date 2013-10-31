@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Get Image",
   "description": "Get Image",
+  "phrases": {
+    "active": "Getting image {{input.imageID}}"
+  },
   "ports": {
     "input": {
       "client": {

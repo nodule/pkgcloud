@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "RedisToGo Credentials",
   "description": "RedisToGo Credentials",
+  "phrases": {
+    "active": "Creating RedisToGo credentials"
+  },
   "ports": {
     "input": {
       "username": {

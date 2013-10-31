@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Get Storage Containers",
   "description": "Get Storage Containers",
+  "phrases": {
+    "active": "Getting available storage containers"
+  },
   "ports": {
     "input": {
       "client": {

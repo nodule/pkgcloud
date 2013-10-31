@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Amazon Credentials",
   "description": "Amazon Credentials",
+  "phrases": {
+    "active": "Sending credentials to Amazon"
+  },
   "ports": {
     "input": {
       "key": {

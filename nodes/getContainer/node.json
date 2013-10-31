@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Get Storage Container",
   "description": "Get a Storage Container",
+  "phrases": {
+    "active": "Getting storage container {{input.options.containerName}}"
+  },
   "ports": {
     "input": {
       "client": {

@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Destroy Storage Container",
   "description": "Destroy a Storage Container",
+  "phrases": {
+    "active": "Destroying container {{input.containerName}}"
+  },
   "ports": {
     "input": {
       "client": {

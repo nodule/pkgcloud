@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Create Storage Container",
   "description": "Create a Storage Container",
+  "phrases": {
+    "active": "Creating storage container"
+  },
   "ports": {
     "input": {
       "client": {

@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Azure Credentials",
   "description": "See: [using compute](https://github.com/nodejitsu/pkgcloud/blob/master/docs/providers/azure.md#using-compute)",
+  "phrases": {
+    "active": "Creating credentials for azure"
+  },
   "ports": {
     "input": {
     },

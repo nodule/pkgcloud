@@ -3,6 +3,9 @@
   "ns": "pkgcloud",
   "title": "Compute",
   "description": "The pkgcloud.compute service is designed to make it easy to provision and work with VMs.",
+  "phrases": {
+    "active": "Creating compute service"
+  },
   "require": {
     "pkgcloud": "0.x.x"
   },

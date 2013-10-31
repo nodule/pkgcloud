@@ -30,6 +30,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Sending credentials to Amazon"
+      },
       "description": "Amazon Credentials",
       "title": "Amazon Credentials",
       "ns": "pkgcloud",
@@ -40,6 +43,9 @@
       "ports": {
         "input": {},
         "output": {}
+      },
+      "phrases": {
+        "active": "Creating credentials for azure"
       },
       "description": "See: [using compute](https://github.com/nodejitsu/pkgcloud/blob/master/docs/providers/azure.md#using-compute)",
       "title": "Azure Credentials",
@@ -64,6 +70,9 @@
       },
       "require": {
         "pkgcloud": "0.x.x"
+      },
+      "phrases": {
+        "active": "Creating compute service"
       },
       "description": "The pkgcloud.compute service is designed to make it easy to provision and work with VMs.",
       "title": "Compute",
@@ -95,6 +104,9 @@
             "type": "object"
           }
         }
+      },
+      "phrases": {
+        "active": "Creating storage container"
       },
       "description": "Create a Storage Container",
       "title": "Create Storage Container",
@@ -137,6 +149,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating image"
+      },
       "description": "Create Image",
       "title": "Create Image",
       "ns": "pkgcloud",
@@ -168,6 +183,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating server"
+      },
       "description": "Creates a server",
       "title": "Create a Server",
       "ns": "pkgcloud",
@@ -191,6 +209,9 @@
       },
       "require": {
         "pkgcloud": "0.x.x"
+      },
+      "phrases": {
+        "active": "Creating database service"
       },
       "description": "The pkgcloud.database service is designed to consistently work with a variety of Database-as-a-Service (DBaaS) providers.",
       "title": "Database",
@@ -218,6 +239,9 @@
             "type": "object"
           }
         }
+      },
+      "phrases": {
+        "active": "Destroying container {{input.containerName}}"
       },
       "description": "Destroy a Storage Container",
       "title": "Destroy Storage Container",
@@ -250,6 +274,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Destroying image"
+      },
       "description": "Destroy Image",
       "title": "Destroy Image",
       "ns": "pkgcloud",
@@ -281,6 +308,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Destroying server"
+      },
       "description": "Destroys a server",
       "title": "Destroy Server",
       "ns": "pkgcloud",
@@ -304,6 +334,9 @@
       },
       "require": {
         "pkgcloud": "0.x.x"
+      },
+      "phrases": {
+        "active": "Creating DNS service"
       },
       "description": "The pkgcloud.dns service is designed to make it easy to manage DNS zones and records on various infrastructure providers.",
       "title": "Dns",
@@ -341,6 +374,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Downloading {{input.options.remote}} from {{input.options.container}}"
+      },
       "description": "Downloads a file from storage",
       "title": "Download file",
       "ns": "pkgcloud",
@@ -372,6 +408,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting storage container {{input.options.containerName}}"
+      },
       "description": "Get a Storage Container",
       "title": "Get Storage Container",
       "ns": "pkgcloud",
@@ -397,6 +436,9 @@
             "type": "array"
           }
         }
+      },
+      "phrases": {
+        "active": "Getting available storage containers"
       },
       "description": "Get Storage Containers",
       "title": "Get Storage Containers",
@@ -434,6 +476,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting files from {{input.container}}"
+      },
       "description": "Get Files",
       "title": "Get Files",
       "ns": "pkgcloud",
@@ -464,6 +509,9 @@
             "type": "array"
           }
         }
+      },
+      "phrases": {
+        "active": "Getting files from {{input.container}}"
       },
       "description": "Get Files",
       "title": "Get Files",
@@ -496,6 +544,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting flavor {{input.flavor}}"
+      },
       "description": "Get Flavor",
       "title": "Get Flavor",
       "ns": "pkgcloud",
@@ -521,6 +572,9 @@
             "type": "object"
           }
         }
+      },
+      "phrases": {
+        "active": "Getting API Limits"
       },
       "description": "Get API limits",
       "title": "API Limits",
@@ -553,6 +607,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting image {{input.imageID}}"
+      },
       "description": "Get Image",
       "title": "Get Image",
       "ns": "pkgcloud",
@@ -579,6 +636,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting images"
+      },
       "description": "Get Images",
       "title": "Get Images",
       "ns": "pkgcloud",
@@ -604,6 +664,9 @@
             "type": "object"
           }
         }
+      },
+      "phrases": {
+        "active": "Getting API limits"
       },
       "description": "Get API limits",
       "title": "API Limits",
@@ -636,6 +699,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting Server"
+      },
       "description": "Get a server",
       "title": "Get Server",
       "ns": "pkgcloud",
@@ -661,6 +727,9 @@
             "type": "string"
           }
         }
+      },
+      "phrases": {
+        "active": "Getting server version"
       },
       "description": "Get the server version",
       "title": "Server Version",
@@ -688,6 +757,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting servers for this compute"
+      },
       "description": "Get servers for this compute",
       "title": "Get Servers",
       "ns": "pkgcloud",
@@ -713,6 +785,9 @@
             "type": "object"
           }
         }
+      },
+      "phrases": {
+        "active": "Creating IrisCouch Credentials"
       },
       "description": "In order to use IrisCOuch you will need to have created a valid account. ",
       "title": "IrisCouch Credentials",
@@ -740,6 +815,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating Joyent Credentials"
+      },
       "description": "Joyent requires a username / password or key / keyId combo. The key / keyId should be registered in Joyent servers",
       "title": "Joyent Credentials",
       "ns": "pkgcloud",
@@ -765,6 +843,9 @@
             "type": "object"
           }
         }
+      },
+      "phrases": {
+        "active": "Creating MongoHQ Credentials"
       },
       "description": "MongoHQ Credentials",
       "title": "MongoHQ Credentials",
@@ -792,6 +873,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating MongoLab Credentials"
+      },
       "description": "To create a database with MongoLab you will need first create an account and then use the created account as `owner` of the database.",
       "title": "MongoLab Credentials",
       "ns": "pkgcloud",
@@ -817,6 +901,9 @@
             "type": "object"
           }
         }
+      },
+      "phrases": {
+        "active": "Creating Rackspace Credentials"
       },
       "description": "Rackspace Credentials",
       "title": "Rackspace Credentials",
@@ -852,6 +939,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Rebooting server {{input.type}}"
+      },
       "description": "Reboots a server",
       "title": "Reboot Server",
       "ns": "pkgcloud",
@@ -877,6 +967,9 @@
             "type": "object"
           }
         }
+      },
+      "phrases": {
+        "active": "Creating RedisToGo credentials"
       },
       "description": "RedisToGo Credentials",
       "title": "RedisToGo Credentials",
@@ -910,6 +1003,9 @@
           }
         }
       },
+      "phrases": {
+        "active": "Removing file {{input.file}} from {{input.container}}"
+      },
       "description": "Remove a File",
       "title": "Remove File",
       "ns": "pkgcloud",
@@ -933,6 +1029,9 @@
       },
       "require": {
         "pkgcloud": "0.x.x"
+      },
+      "phrases": {
+        "active": "Creating storage service"
       },
       "description": "The pkgcloud.storage service is designed to make it easy to upload and download files to various infrastructure providers",
       "title": "Storage",
@@ -969,6 +1068,9 @@
             "type": "object"
           }
         }
+      },
+      "phrases": {
+        "active": "Uploading {{input.options.remote}} to {{input.options.container}}"
       },
       "description": "Uploads a file to storage",
       "title": "Upload file",
