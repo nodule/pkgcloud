@@ -37,6 +37,7 @@
       "title": "Amazon Credentials",
       "ns": "pkgcloud",
       "name": "amazon",
+      "env": "server",
       "fn": "output = input\noutput.provider = \"amazon\"\n"
     },
     {
@@ -51,6 +52,7 @@
       "title": "Azure Credentials",
       "ns": "pkgcloud",
       "name": "azure",
+      "env": "server",
       "fn": "/* TODO: a bit ugly this, we don't really need a .js here\noutput = input\n"
     },
     {
@@ -78,6 +80,7 @@
       "title": "Compute",
       "ns": "pkgcloud",
       "name": "compute",
+      "env": "server",
       "fn": "output = { client: pkgcloud.compute.createClient(input.credentials) }\n"
     },
     {
@@ -112,6 +115,7 @@
       "title": "Create Storage Container",
       "ns": "pkgcloud",
       "name": "createContainer",
+      "env": "server",
       "fn": "output = [client, 'createContainer', input.options] \n"
     },
     {
@@ -156,6 +160,7 @@
       "title": "Create Image",
       "ns": "pkgcloud",
       "name": "createImage",
+      "env": "server",
       "fn": "output = [client, 'createImage', input.options] \n"
     },
     {
@@ -190,6 +195,7 @@
       "title": "Create a Server",
       "ns": "pkgcloud",
       "name": "createServer",
+      "env": "server",
       "fn": "output = [client, 'createServer'] \n"
     },
     {
@@ -217,6 +223,7 @@
       "title": "Database",
       "ns": "pkgcloud",
       "name": "database",
+      "env": "server",
       "fn": "output = { client: pkgcloud.database.createClient(input.credentials) }\n"
     },
     {
@@ -247,6 +254,7 @@
       "title": "Destroy Storage Container",
       "ns": "pkgcloud",
       "name": "destroyContainer",
+      "env": "server",
       "fn": "output = [client, 'destroyContainer', input.containerName] \n"
     },
     {
@@ -281,6 +289,7 @@
       "title": "Destroy Image",
       "ns": "pkgcloud",
       "name": "destroyImage",
+      "env": "server",
       "fn": "output = [client, 'destroyImage', input.image] \n"
     },
     {
@@ -315,6 +324,7 @@
       "title": "Destroy Server",
       "ns": "pkgcloud",
       "name": "destroyServer",
+      "env": "server",
       "fn": "output = [client, 'destroyServer', input.server] \n"
     },
     {
@@ -342,6 +352,7 @@
       "title": "Dns",
       "ns": "pkgcloud",
       "name": "dns",
+      "env": "server",
       "fn": "output = { client: pkgcloud.dns.createClient(input.credentials) }\n"
     },
     {
@@ -381,6 +392,7 @@
       "title": "Download file",
       "ns": "pkgcloud",
       "name": "download",
+      "env": "server",
       "fn": "output = { upload: client.upload(input.options) }\n"
     },
     {
@@ -415,6 +427,7 @@
       "title": "Get Storage Container",
       "ns": "pkgcloud",
       "name": "getContainer",
+      "env": "server",
       "fn": "output = [client, 'getContainer', input.containerName] \n"
     },
     {
@@ -444,6 +457,7 @@
       "title": "Get Storage Containers",
       "ns": "pkgcloud",
       "name": "getContainers",
+      "env": "server",
       "fn": "output = [client, 'getContainers'] \n"
     },
     {
@@ -483,6 +497,7 @@
       "title": "Get Files",
       "ns": "pkgcloud",
       "name": "getFiles",
+      "env": "server",
       "fn": "output = [client, 'getFile', input.container, input.file] \n"
     },
     {
@@ -517,6 +532,7 @@
       "title": "Get Files",
       "ns": "pkgcloud",
       "name": "getFiles",
+      "env": "server",
       "fn": "output = [client, 'getFiles', input.container] \n"
     },
     {
@@ -551,6 +567,7 @@
       "title": "Get Flavor",
       "ns": "pkgcloud",
       "name": "getFlavor",
+      "env": "server",
       "fn": "output = [client, 'getFlavor', input.flavor] \n"
     },
     {
@@ -580,6 +597,7 @@
       "title": "API Limits",
       "ns": "pkgcloud",
       "name": "getLimits",
+      "env": "server",
       "fn": "output = [client, 'getFlavors'] \n"
     },
     {
@@ -614,6 +632,7 @@
       "title": "Get Image",
       "ns": "pkgcloud",
       "name": "getImage",
+      "env": "server",
       "fn": "output = [client, 'getImages'] \n"
     },
     {
@@ -643,6 +662,7 @@
       "title": "Get Images",
       "ns": "pkgcloud",
       "name": "getImages",
+      "env": "server",
       "fn": "output = [client, 'getImages'] \n"
     },
     {
@@ -672,6 +692,7 @@
       "title": "API Limits",
       "ns": "pkgcloud",
       "name": "getLimits",
+      "env": "server",
       "fn": "output = [client, 'getLimits'] \n"
     },
     {
@@ -706,6 +727,7 @@
       "title": "Get Server",
       "ns": "pkgcloud",
       "name": "getServer",
+      "env": "server",
       "fn": "output = [client, 'getServer', input.server] \n"
     },
     {
@@ -735,6 +757,7 @@
       "title": "Server Version",
       "ns": "pkgcloud",
       "name": "getVersion",
+      "env": "server",
       "fn": "output = [client, 'getVersion'] \n"
     },
     {
@@ -764,6 +787,7 @@
       "title": "Get Servers",
       "ns": "pkgcloud",
       "name": "getServers",
+      "env": "server",
       "fn": "output = [client, 'getServers'] \n"
     },
     {
@@ -793,6 +817,7 @@
       "title": "IrisCouch Credentials",
       "ns": "pkgcloud",
       "name": "iriscouch",
+      "env": "server",
       "fn": "output = input\noutput.provider = \"iriscouch\"\n"
     },
     {
@@ -822,6 +847,7 @@
       "title": "Joyent Credentials",
       "ns": "pkgcloud",
       "name": "joyent",
+      "env": "server",
       "fn": "output = input\noutput.provider = \"joyent\"\n"
     },
     {
@@ -851,6 +877,7 @@
       "title": "MongoHQ Credentials",
       "ns": "pkgcloud",
       "name": "mongohq",
+      "env": "server",
       "fn": "output = input\noutput.provider = \"mongohq\"\n"
     },
     {
@@ -880,6 +907,7 @@
       "title": "MongoLab Credentials",
       "ns": "pkgcloud",
       "name": "mongolab",
+      "env": "server",
       "fn": "output = input\noutput.provider = \"mongolab\"\n"
     },
     {
@@ -909,6 +937,7 @@
       "title": "Rackspace Credentials",
       "ns": "pkgcloud",
       "name": "rackspace",
+      "env": "server",
       "fn": "output = input\noutput.provider = \"rackspace\"\n"
     },
     {
@@ -946,6 +975,7 @@
       "title": "Reboot Server",
       "ns": "pkgcloud",
       "name": "rebootServer",
+      "env": "server",
       "fn": "output = [client, 'rebootServer', input.server, { type: input.type }] \n"
     },
     {
@@ -975,6 +1005,7 @@
       "title": "RedisToGo Credentials",
       "ns": "pkgcloud",
       "name": "redistogo",
+      "env": "server",
       "fn": "output = input\noutput.provider = \"redistogo\"\n"
     },
     {
@@ -1010,6 +1041,7 @@
       "title": "Remove File",
       "ns": "pkgcloud",
       "name": "removeFile",
+      "env": "server",
       "fn": "output = [client, 'removeFile', input.container, input.file] \n"
     },
     {
@@ -1037,6 +1069,7 @@
       "title": "Storage",
       "ns": "pkgcloud",
       "name": "storage",
+      "env": "server",
       "fn": "output = { client: pkgcloud.storage.createClient(input.credentials) }\n"
     },
     {
@@ -1076,8 +1109,10 @@
       "title": "Upload file",
       "ns": "pkgcloud",
       "name": "upload",
+      "env": "server",
       "fn": "output = { upload: client.upload(input.options) }\n"
     }
   ],
-  "twigs": []
+  "twigs": [],
+  "env": "server"
 }

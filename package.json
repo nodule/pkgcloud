@@ -23,6 +23,7 @@
   },
   "chix": {
     "name": "pkgcloud",
+    "env": "server",
     "color": "rgb(150,79,39)"
   }
 }
