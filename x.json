@@ -11,13 +11,6 @@
   },
   "nodes": [
     {
-      "name": "amazon",
-      "ns": "pkgcloud",
-      "title": "Amazon Credentials",
-      "description": "Amazon Credentials",
-      "phrases": {
-        "active": "Sending credentials to Amazon"
-      },
       "ports": {
         "input": {
           "key": {
@@ -37,35 +30,32 @@
           }
         }
       },
+      "phrases": {
+        "active": "Sending credentials to Amazon"
+      },
+      "description": "Amazon Credentials",
+      "title": "Amazon Credentials",
+      "ns": "pkgcloud",
+      "name": "amazon",
       "env": "server",
       "fn": "output = input\noutput.provider = \"amazon\"\n"
     },
     {
-      "name": "azure",
-      "ns": "pkgcloud",
-      "title": "Azure Credentials",
-      "description": "See: [using compute](https://github.com/nodejitsu/pkgcloud/blob/master/docs/providers/azure.md#using-compute)",
-      "phrases": {
-        "active": "Creating credentials for azure"
-      },
       "ports": {
         "input": {},
         "output": {}
       },
+      "phrases": {
+        "active": "Creating credentials for azure"
+      },
+      "description": "See: [using compute](https://github.com/nodejitsu/pkgcloud/blob/master/docs/providers/azure.md#using-compute)",
+      "title": "Azure Credentials",
+      "ns": "pkgcloud",
+      "name": "azure",
       "env": "server",
-      "fn": "/* TODO: a bit ugly this, we don't really need a .js here\noutput = input\n"
+      "fn": "/* TODO: a bit ugly this, we don't really need a .js here\noutput = input\n*/\n"
     },
     {
-      "name": "compute",
-      "ns": "pkgcloud",
-      "title": "Compute",
-      "description": "The pkgcloud.compute service is designed to make it easy to provision and work with VMs.",
-      "phrases": {
-        "active": "Creating compute service"
-      },
-      "require": {
-        "pkgcloud": "0.x.x"
-      },
       "ports": {
         "input": {
           "credentials": {
@@ -80,17 +70,20 @@
           }
         }
       },
+      "require": {
+        "pkgcloud": "0.x.x"
+      },
+      "phrases": {
+        "active": "Creating compute service"
+      },
+      "description": "The pkgcloud.compute service is designed to make it easy to provision and work with VMs.",
+      "title": "Compute",
+      "ns": "pkgcloud",
+      "name": "compute",
       "env": "server",
-      "fn": "output = { client: pkgcloud.compute.createClient(input.credentials) }\n"
+      "fn": "output = {\n  client: pkgcloud.compute.createClient(input.credentials)\n}\n"
     },
     {
-      "name": "createContainer",
-      "ns": "pkgcloud",
-      "title": "Create Storage Container",
-      "description": "Create a Storage Container",
-      "phrases": {
-        "active": "Creating storage container"
-      },
       "ports": {
         "input": {
           "client": {
@@ -115,17 +108,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating storage container"
+      },
+      "description": "Create a Storage Container",
+      "title": "Create Storage Container",
+      "ns": "pkgcloud",
+      "name": "createContainer",
       "env": "server",
-      "fn": "output = [client, 'createContainer', input.options] \n"
+      "fn": "output = [client, 'createContainer', input.options]\n"
     },
     {
-      "name": "createImage",
-      "ns": "pkgcloud",
-      "title": "Create Image",
-      "description": "Create Image",
-      "phrases": {
-        "active": "Creating image"
-      },
       "ports": {
         "input": {
           "client": {
@@ -160,17 +153,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating image"
+      },
+      "description": "Create Image",
+      "title": "Create Image",
+      "ns": "pkgcloud",
+      "name": "createImage",
       "env": "server",
-      "fn": "output = [client, 'createImage', input.options] \n"
+      "fn": "output = [client, 'createImage', input.options]\n"
     },
     {
-      "name": "createServer",
-      "ns": "pkgcloud",
-      "title": "Create a Server",
-      "description": "Creates a server",
-      "phrases": {
-        "active": "Creating server"
-      },
       "ports": {
         "input": {
           "client": {
@@ -195,20 +188,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating server"
+      },
+      "description": "Creates a server",
+      "title": "Create a Server",
+      "ns": "pkgcloud",
+      "name": "createServer",
       "env": "server",
-      "fn": "output = [client, 'createServer'] \n"
+      "fn": "output = [client, 'createServer']\n"
     },
     {
-      "name": "database",
-      "ns": "pkgcloud",
-      "title": "Database",
-      "description": "The pkgcloud.database service is designed to consistently work with a variety of Database-as-a-Service (DBaaS) providers.",
-      "phrases": {
-        "active": "Creating database service"
-      },
-      "require": {
-        "pkgcloud": "0.x.x"
-      },
       "ports": {
         "input": {
           "credentials": {
@@ -223,17 +213,20 @@
           }
         }
       },
+      "require": {
+        "pkgcloud": "0.x.x"
+      },
+      "phrases": {
+        "active": "Creating database service"
+      },
+      "description": "The pkgcloud.database service is designed to consistently work with a variety of Database-as-a-Service (DBaaS) providers.",
+      "title": "Database",
+      "ns": "pkgcloud",
+      "name": "database",
       "env": "server",
-      "fn": "output = { client: pkgcloud.database.createClient(input.credentials) }\n"
+      "fn": "output = {\n  client: pkgcloud.database.createClient(input.credentials)\n}\n"
     },
     {
-      "name": "destroyContainer",
-      "ns": "pkgcloud",
-      "title": "Destroy Storage Container",
-      "description": "Destroy a Storage Container",
-      "phrases": {
-        "active": "Destroying container {{input.containerName}}"
-      },
       "ports": {
         "input": {
           "client": {
@@ -254,17 +247,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Destroying container {{input.containerName}}"
+      },
+      "description": "Destroy a Storage Container",
+      "title": "Destroy Storage Container",
+      "ns": "pkgcloud",
+      "name": "destroyContainer",
       "env": "server",
-      "fn": "output = [client, 'destroyContainer', input.containerName] \n"
+      "fn": "output = [client, 'destroyContainer', input.containerName]\n"
     },
     {
-      "name": "destroyImage",
-      "ns": "pkgcloud",
-      "title": "Destroy Image",
-      "description": "Destroy Image",
-      "phrases": {
-        "active": "Destroying image"
-      },
       "ports": {
         "input": {
           "client": {
@@ -289,17 +282,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Destroying image"
+      },
+      "description": "Destroy Image",
+      "title": "Destroy Image",
+      "ns": "pkgcloud",
+      "name": "destroyImage",
       "env": "server",
-      "fn": "output = [client, 'destroyImage', input.image] \n"
+      "fn": "output = [client, 'destroyImage', input.image]\n"
     },
     {
-      "name": "destroyServer",
-      "ns": "pkgcloud",
-      "title": "Destroy Server",
-      "description": "Destroys a server",
-      "phrases": {
-        "active": "Destroying server"
-      },
       "ports": {
         "input": {
           "client": {
@@ -324,20 +317,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Destroying server"
+      },
+      "description": "Destroys a server",
+      "title": "Destroy Server",
+      "ns": "pkgcloud",
+      "name": "destroyServer",
       "env": "server",
-      "fn": "output = [client, 'destroyServer', input.server] \n"
+      "fn": "output = [client, 'destroyServer', input.server]\n"
     },
     {
-      "name": "dns",
-      "ns": "pkgcloud",
-      "title": "Dns",
-      "description": "The pkgcloud.dns service is designed to make it easy to manage DNS zones and records on various infrastructure providers.",
-      "phrases": {
-        "active": "Creating DNS service"
-      },
-      "require": {
-        "pkgcloud": "0.x.x"
-      },
       "ports": {
         "input": {
           "credentials": {
@@ -352,17 +342,20 @@
           }
         }
       },
+      "require": {
+        "pkgcloud": "0.x.x"
+      },
+      "phrases": {
+        "active": "Creating DNS service"
+      },
+      "description": "The pkgcloud.dns service is designed to make it easy to manage DNS zones and records on various infrastructure providers.",
+      "title": "Dns",
+      "ns": "pkgcloud",
+      "name": "dns",
       "env": "server",
-      "fn": "output = { client: pkgcloud.dns.createClient(input.credentials) }\n"
+      "fn": "output = {\n  client: pkgcloud.dns.createClient(input.credentials)\n}\n"
     },
     {
-      "name": "download",
-      "ns": "pkgcloud",
-      "title": "Download file",
-      "description": "Downloads a file from storage",
-      "phrases": {
-        "active": "Downloading {{input.options.remote}} from {{input.options.container}}"
-      },
       "ports": {
         "input": {
           "client": {
@@ -392,17 +385,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Downloading {{input.options.remote}} from {{input.options.container}}"
+      },
+      "description": "Downloads a file from storage",
+      "title": "Download file",
+      "ns": "pkgcloud",
+      "name": "download",
       "env": "server",
-      "fn": "output = { upload: client.upload(input.options) }\n"
+      "fn": "output = {\n  upload: client.upload(input.options)\n}\n"
     },
     {
-      "name": "getContainer",
-      "ns": "pkgcloud",
-      "title": "Get Storage Container",
-      "description": "Get a Storage Container",
-      "phrases": {
-        "active": "Getting storage container {{input.options.containerName}}"
-      },
       "ports": {
         "input": {
           "client": {
@@ -427,17 +420,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting storage container {{input.options.containerName}}"
+      },
+      "description": "Get a Storage Container",
+      "title": "Get Storage Container",
+      "ns": "pkgcloud",
+      "name": "getContainer",
       "env": "server",
-      "fn": "output = [client, 'getContainer', input.containerName] \n"
+      "fn": "output = [client, 'getContainer', input.containerName]\n"
     },
     {
-      "name": "getContainers",
-      "ns": "pkgcloud",
-      "title": "Get Storage Containers",
-      "description": "Get Storage Containers",
-      "phrases": {
-        "active": "Getting available storage containers"
-      },
       "ports": {
         "input": {
           "client": {
@@ -457,17 +450,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting available storage containers"
+      },
+      "description": "Get Storage Containers",
+      "title": "Get Storage Containers",
+      "ns": "pkgcloud",
+      "name": "getContainers",
       "env": "server",
-      "fn": "output = [client, 'getContainers'] \n"
+      "fn": "output = [client, 'getContainers']\n"
     },
     {
-      "name": "getFiles",
-      "ns": "pkgcloud",
-      "title": "Get Files",
-      "description": "Get Files",
-      "phrases": {
-        "active": "Getting files from {{input.container}}"
-      },
       "ports": {
         "input": {
           "client": {
@@ -497,17 +490,17 @@
           }
         }
       },
-      "env": "server",
-      "fn": "output = [client, 'getFile', input.container, input.file] \n"
-    },
-    {
-      "name": "getFiles",
-      "ns": "pkgcloud",
-      "title": "Get Files",
-      "description": "Get Files",
       "phrases": {
         "active": "Getting files from {{input.container}}"
       },
+      "description": "Get Files",
+      "title": "Get Files",
+      "ns": "pkgcloud",
+      "name": "getFiles",
+      "env": "server",
+      "fn": "output = [client, 'getFile', input.container, input.file]\n"
+    },
+    {
       "ports": {
         "input": {
           "client": {
@@ -532,17 +525,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting files from {{input.container}}"
+      },
+      "description": "Get Files",
+      "title": "Get Files",
+      "ns": "pkgcloud",
+      "name": "getFiles",
       "env": "server",
-      "fn": "output = [client, 'getFiles', input.container] \n"
+      "fn": "output = [client, 'getFiles', input.container]\n"
     },
     {
-      "name": "getFlavor",
-      "ns": "pkgcloud",
-      "title": "Get Flavor",
-      "description": "Get Flavor",
-      "phrases": {
-        "active": "Getting flavor {{input.flavor}}"
-      },
       "ports": {
         "input": {
           "client": {
@@ -567,17 +560,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting flavor {{input.flavor}}"
+      },
+      "description": "Get Flavor",
+      "title": "Get Flavor",
+      "ns": "pkgcloud",
+      "name": "getFlavor",
       "env": "server",
-      "fn": "output = [client, 'getFlavor', input.flavor] \n"
+      "fn": "output = [client, 'getFlavor', input.flavor]\n"
     },
     {
-      "name": "getLimits",
-      "ns": "pkgcloud",
-      "title": "API Limits",
-      "description": "Get API limits",
-      "phrases": {
-        "active": "Getting API Limits"
-      },
       "ports": {
         "input": {
           "client": {
@@ -597,17 +590,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting API Limits"
+      },
+      "description": "Get API limits",
+      "title": "API Limits",
+      "ns": "pkgcloud",
+      "name": "getLimits",
       "env": "server",
-      "fn": "output = [client, 'getFlavors'] \n"
+      "fn": "output = [client, 'getFlavors']\n"
     },
     {
-      "name": "getImage",
-      "ns": "pkgcloud",
-      "title": "Get Image",
-      "description": "Get Image",
-      "phrases": {
-        "active": "Getting image {{input.imageID}}"
-      },
       "ports": {
         "input": {
           "client": {
@@ -632,17 +625,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting image {{input.imageID}}"
+      },
+      "description": "Get Image",
+      "title": "Get Image",
+      "ns": "pkgcloud",
+      "name": "getImage",
       "env": "server",
-      "fn": "output = [client, 'getImages'] \n"
+      "fn": "output = [client, 'getImages']\n"
     },
     {
-      "name": "getImages",
-      "ns": "pkgcloud",
-      "title": "Get Images",
-      "description": "Get Images",
-      "phrases": {
-        "active": "Getting images"
-      },
       "ports": {
         "input": {
           "client": {
@@ -662,17 +655,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting images"
+      },
+      "description": "Get Images",
+      "title": "Get Images",
+      "ns": "pkgcloud",
+      "name": "getImages",
       "env": "server",
-      "fn": "output = [client, 'getImages'] \n"
+      "fn": "output = [client, 'getImages']\n"
     },
     {
-      "name": "getLimits",
-      "ns": "pkgcloud",
-      "title": "API Limits",
-      "description": "Get API limits",
-      "phrases": {
-        "active": "Getting API limits"
-      },
       "ports": {
         "input": {
           "client": {
@@ -692,17 +685,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting API limits"
+      },
+      "description": "Get API limits",
+      "title": "API Limits",
+      "ns": "pkgcloud",
+      "name": "getLimits",
       "env": "server",
-      "fn": "output = [client, 'getLimits'] \n"
+      "fn": "output = [client, 'getLimits']\n"
     },
     {
-      "name": "getServer",
-      "ns": "pkgcloud",
-      "title": "Get Server",
-      "description": "Get a server",
-      "phrases": {
-        "active": "Getting Server"
-      },
       "ports": {
         "input": {
           "client": {
@@ -727,17 +720,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting Server"
+      },
+      "description": "Get a server",
+      "title": "Get Server",
+      "ns": "pkgcloud",
+      "name": "getServer",
       "env": "server",
-      "fn": "output = [client, 'getServer', input.server] \n"
+      "fn": "output = [client, 'getServer', input.server]\n"
     },
     {
-      "name": "getVersion",
-      "ns": "pkgcloud",
-      "title": "Server Version",
-      "description": "Get the server version",
-      "phrases": {
-        "active": "Getting server version"
-      },
       "ports": {
         "input": {
           "client": {
@@ -757,17 +750,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting server version"
+      },
+      "description": "Get the server version",
+      "title": "Server Version",
+      "ns": "pkgcloud",
+      "name": "getVersion",
       "env": "server",
-      "fn": "output = [client, 'getVersion'] \n"
+      "fn": "output = [client, 'getVersion']\n"
     },
     {
-      "name": "getServers",
-      "ns": "pkgcloud",
-      "title": "Get Servers",
-      "description": "Get servers for this compute",
-      "phrases": {
-        "active": "Getting servers for this compute"
-      },
       "ports": {
         "input": {
           "client": {
@@ -787,17 +780,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Getting servers for this compute"
+      },
+      "description": "Get servers for this compute",
+      "title": "Get Servers",
+      "ns": "pkgcloud",
+      "name": "getServers",
       "env": "server",
-      "fn": "output = [client, 'getServers'] \n"
+      "fn": "output = [client, 'getServers']\n"
     },
     {
-      "name": "iriscouch",
-      "ns": "pkgcloud",
-      "title": "IrisCouch Credentials",
-      "description": "In order to use IrisCOuch you will need to have created a valid account. ",
-      "phrases": {
-        "active": "Creating IrisCouch Credentials"
-      },
       "ports": {
         "input": {
           "username": {
@@ -817,17 +810,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating IrisCouch Credentials"
+      },
+      "description": "In order to use IrisCOuch you will need to have created a valid account. ",
+      "title": "IrisCouch Credentials",
+      "ns": "pkgcloud",
+      "name": "iriscouch",
       "env": "server",
       "fn": "output = input\noutput.provider = \"iriscouch\"\n"
     },
     {
-      "name": "joyent",
-      "ns": "pkgcloud",
-      "title": "Joyent Credentials",
-      "description": "Joyent requires a username / password or key / keyId combo. The key / keyId should be registered in Joyent servers",
-      "phrases": {
-        "active": "Creating Joyent Credentials"
-      },
       "ports": {
         "input": {
           "username": {
@@ -847,17 +840,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating Joyent Credentials"
+      },
+      "description": "Joyent requires a username / password or key / keyId combo. The key / keyId should be registered in Joyent servers",
+      "title": "Joyent Credentials",
+      "ns": "pkgcloud",
+      "name": "joyent",
       "env": "server",
       "fn": "output = input\noutput.provider = \"joyent\"\n"
     },
     {
-      "name": "mongohq",
-      "ns": "pkgcloud",
-      "title": "MongoHQ Credentials",
-      "description": "MongoHQ Credentials",
-      "phrases": {
-        "active": "Creating MongoHQ Credentials"
-      },
       "ports": {
         "input": {
           "username": {
@@ -877,17 +870,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating MongoHQ Credentials"
+      },
+      "description": "MongoHQ Credentials",
+      "title": "MongoHQ Credentials",
+      "ns": "pkgcloud",
+      "name": "mongohq",
       "env": "server",
       "fn": "output = input\noutput.provider = \"mongohq\"\n"
     },
     {
-      "name": "mongolab",
-      "ns": "pkgcloud",
-      "title": "MongoLab Credentials",
-      "description": "To create a database with MongoLab you will need first create an account and then use the created account as `owner` of the database.",
-      "phrases": {
-        "active": "Creating MongoLab Credentials"
-      },
       "ports": {
         "input": {
           "username": {
@@ -907,17 +900,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating MongoLab Credentials"
+      },
+      "description": "To create a database with MongoLab you will need first create an account and then use the created account as `owner` of the database.",
+      "title": "MongoLab Credentials",
+      "ns": "pkgcloud",
+      "name": "mongolab",
       "env": "server",
       "fn": "output = input\noutput.provider = \"mongolab\"\n"
     },
     {
-      "name": "rackspace",
-      "ns": "pkgcloud",
-      "title": "Rackspace Credentials",
-      "description": "Rackspace Credentials",
-      "phrases": {
-        "active": "Creating Rackspace Credentials"
-      },
       "ports": {
         "input": {
           "username": {
@@ -937,17 +930,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating Rackspace Credentials"
+      },
+      "description": "Rackspace Credentials",
+      "title": "Rackspace Credentials",
+      "ns": "pkgcloud",
+      "name": "rackspace",
       "env": "server",
       "fn": "output = input\noutput.provider = \"rackspace\"\n"
     },
     {
-      "name": "rebootServer",
-      "ns": "pkgcloud",
-      "title": "Reboot Server",
-      "description": "Reboots a server",
-      "phrases": {
-        "active": "Rebooting server {{input.type}}"
-      },
       "ports": {
         "input": {
           "client": {
@@ -975,17 +968,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Rebooting server {{input.type}}"
+      },
+      "description": "Reboots a server",
+      "title": "Reboot Server",
+      "ns": "pkgcloud",
+      "name": "rebootServer",
       "env": "server",
-      "fn": "output = [client, 'rebootServer', input.server, { type: input.type }] \n"
+      "fn": "output = [client, 'rebootServer', input.server, {\n  type: input.type\n}]\n"
     },
     {
-      "name": "redistogo",
-      "ns": "pkgcloud",
-      "title": "RedisToGo Credentials",
-      "description": "RedisToGo Credentials",
-      "phrases": {
-        "active": "Creating RedisToGo credentials"
-      },
       "ports": {
         "input": {
           "username": {
@@ -1005,17 +998,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Creating RedisToGo credentials"
+      },
+      "description": "RedisToGo Credentials",
+      "title": "RedisToGo Credentials",
+      "ns": "pkgcloud",
+      "name": "redistogo",
       "env": "server",
       "fn": "output = input\noutput.provider = \"redistogo\"\n"
     },
     {
-      "name": "removeFile",
-      "ns": "pkgcloud",
-      "title": "Remove File",
-      "description": "Remove a File",
-      "phrases": {
-        "active": "Removing file {{input.file}} from {{input.container}}"
-      },
       "ports": {
         "input": {
           "client": {
@@ -1041,20 +1034,17 @@
           }
         }
       },
+      "phrases": {
+        "active": "Removing file {{input.file}} from {{input.container}}"
+      },
+      "description": "Remove a File",
+      "title": "Remove File",
+      "ns": "pkgcloud",
+      "name": "removeFile",
       "env": "server",
-      "fn": "output = [client, 'removeFile', input.container, input.file] \n"
+      "fn": "output = [client, 'removeFile', input.container, input.file]\n"
     },
     {
-      "name": "storage",
-      "ns": "pkgcloud",
-      "title": "Storage",
-      "description": "The pkgcloud.storage service is designed to make it easy to upload and download files to various infrastructure providers",
-      "phrases": {
-        "active": "Creating storage service"
-      },
-      "require": {
-        "pkgcloud": "0.x.x"
-      },
       "ports": {
         "input": {
           "credentials": {
@@ -1069,17 +1059,20 @@
           }
         }
       },
+      "require": {
+        "pkgcloud": "0.x.x"
+      },
+      "phrases": {
+        "active": "Creating storage service"
+      },
+      "description": "The pkgcloud.storage service is designed to make it easy to upload and download files to various infrastructure providers",
+      "title": "Storage",
+      "ns": "pkgcloud",
+      "name": "storage",
       "env": "server",
-      "fn": "output = { client: pkgcloud.storage.createClient(input.credentials) }\n"
+      "fn": "output = {\n  client: pkgcloud.storage.createClient(input.credentials)\n}\n"
     },
     {
-      "name": "upload",
-      "ns": "pkgcloud",
-      "title": "Upload file",
-      "description": "Uploads a file to storage",
-      "phrases": {
-        "active": "Uploading {{input.options.remote}} to {{input.options.container}}"
-      },
       "ports": {
         "input": {
           "client": {
@@ -1109,8 +1102,15 @@
           }
         }
       },
+      "phrases": {
+        "active": "Uploading {{input.options.remote}} to {{input.options.container}}"
+      },
+      "description": "Uploads a file to storage",
+      "title": "Upload file",
+      "ns": "pkgcloud",
+      "name": "upload",
       "env": "server",
-      "fn": "output = { upload: client.upload(input.options) }\n"
+      "fn": "output = {\n  upload: client.upload(input.options)\n}\n"
     }
   ],
   "twigs": [],
