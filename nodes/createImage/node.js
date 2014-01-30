@@ -1,1 +1,1 @@
-output = [client, 'createImage', input.options] 
+output = [client, 'createImage', input.options]

@@ -1,1 +1,1 @@
-output = [client, 'getFiles', input.container] 
+output = [client, 'getFiles', input.container]

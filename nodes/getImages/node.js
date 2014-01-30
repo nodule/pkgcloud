@@ -1,1 +1,1 @@
-output = [client, 'getImages'] 
+output = [client, 'getImages']

@@ -1,1 +1,1 @@
-output = [client, 'getServers'] 
+output = [client, 'getServers']

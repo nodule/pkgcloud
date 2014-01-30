@@ -1,1 +1,1 @@
-output = [client, 'getVersion'] 
+output = [client, 'getVersion']

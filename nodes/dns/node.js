@@ -1,1 +1,3 @@
-output = { client: pkgcloud.dns.createClient(input.credentials) }
+output = {
+  client: pkgcloud.dns.createClient(input.credentials)
+}

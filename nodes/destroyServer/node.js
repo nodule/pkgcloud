@@ -1,1 +1,1 @@
-output = [client, 'destroyServer', input.server] 
+output = [client, 'destroyServer', input.server]

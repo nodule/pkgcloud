@@ -1,1 +1,1 @@
-output = [client, 'getFlavors'] 
+output = [client, 'getFlavors']

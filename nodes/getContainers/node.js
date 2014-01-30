@@ -1,1 +1,1 @@
-output = [client, 'getContainers'] 
+output = [client, 'getContainers']

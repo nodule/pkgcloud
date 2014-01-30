@@ -1,1 +1,1 @@
-output = [client, 'destroyImage', input.image] 
+output = [client, 'destroyImage', input.image]

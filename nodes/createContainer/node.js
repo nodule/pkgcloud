@@ -1,1 +1,1 @@
-output = [client, 'createContainer', input.options] 
+output = [client, 'createContainer', input.options]

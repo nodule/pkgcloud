@@ -1,1 +1,1 @@
-output = [client, 'removeFile', input.container, input.file] 
+output = [client, 'removeFile', input.container, input.file]
