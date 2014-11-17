@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Creating storage service"
   },
-  "require": {
-    "pkgcloud": "0.x.x"
-  },
   "ports": {
     "input": {
       "credentials": {
@@ -21,6 +18,11 @@
       "client": {
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "pkgcloud": "0.x.x"
     }
   }
 }

@@ -56,6 +56,11 @@
       "fn": "/* TODO: a bit ugly this, we don't really need a .js here\noutput = input\n*/\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "pkgcloud": "0.x.x"
+        }
+      },
       "ports": {
         "input": {
           "credentials": {
@@ -69,9 +74,6 @@
             "type": "object"
           }
         }
-      },
-      "require": {
-        "pkgcloud": "0.x.x"
       },
       "phrases": {
         "active": "Creating compute service"
@@ -199,6 +201,11 @@
       "fn": "output = [client, 'createServer']\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "pkgcloud": "0.x.x"
+        }
+      },
       "ports": {
         "input": {
           "credentials": {
@@ -212,9 +219,6 @@
             "type": "object"
           }
         }
-      },
-      "require": {
-        "pkgcloud": "0.x.x"
       },
       "phrases": {
         "active": "Creating database service"
@@ -328,6 +332,11 @@
       "fn": "output = [client, 'destroyServer', input.server]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "pkgcloud": "0.x.x"
+        }
+      },
       "ports": {
         "input": {
           "credentials": {
@@ -341,9 +350,6 @@
             "type": "object"
           }
         }
-      },
-      "require": {
-        "pkgcloud": "0.x.x"
       },
       "phrases": {
         "active": "Creating DNS service"
@@ -1045,6 +1051,11 @@
       "fn": "output = [client, 'removeFile', input.container, input.file]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "pkgcloud": "0.x.x"
+        }
+      },
       "ports": {
         "input": {
           "credentials": {
@@ -1058,9 +1069,6 @@
             "type": "object"
           }
         }
-      },
-      "require": {
-        "pkgcloud": "0.x.x"
       },
       "phrases": {
         "active": "Creating storage service"

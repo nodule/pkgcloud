@@ -7,9 +7,7 @@
     "active": "Creating credentials for azure"
   },
   "ports": {
-    "input": {
-    },
-    "output": {
-    }
+    "input": {},
+    "output": {}
   }
 }
