@@ -1,3 +1,3 @@
 output = {
-  client: pkgcloud.storage.createClient(input.credentials)
+  client: pkgcloud.storage.createClient($.credentials)
 }

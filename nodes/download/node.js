@@ -1,3 +1,3 @@
 output = {
-  upload: client.upload(input.options)
+  upload: client.upload($.options)
 }

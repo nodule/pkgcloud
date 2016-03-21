@@ -1,1 +1,1 @@
-output = [client, 'getFile', input.container, input.file]
+output = [client, 'getFile', $.container, $.file]

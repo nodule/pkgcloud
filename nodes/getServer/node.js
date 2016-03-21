@@ -1,1 +1,1 @@
-output = [client, 'getServer', input.server]
+output = [client, 'getServer', $.server]

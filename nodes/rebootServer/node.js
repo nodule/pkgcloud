@@ -1,3 +1,3 @@
-output = [client, 'rebootServer', input.server, {
-  type: input.type
+output = [client, 'rebootServer', $.server, {
+  type: $.type
 }]

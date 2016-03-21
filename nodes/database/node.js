@@ -1,3 +1,3 @@
 output = {
-  client: pkgcloud.database.createClient(input.credentials)
+  client: pkgcloud.database.createClient($.credentials)
 }

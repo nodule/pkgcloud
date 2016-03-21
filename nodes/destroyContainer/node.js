@@ -1,1 +1,1 @@
-output = [client, 'destroyContainer', input.containerName]
+output = [client, 'destroyContainer', $.containerName]
