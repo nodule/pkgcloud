@@ -1,2 +1,1 @@
-output = input
-output.provider = "amazon"
+output.credentials = $.create({key: $.key, keyId: $.keyId,})

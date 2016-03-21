@@ -1,2 +1,1 @@
-output = input
-output.provider = "rackspace"
+output.credentials = $.create({username: $.username, apiKey: $.apiKey}) 

@@ -1,2 +1,1 @@
-output = input
-output.provider = "redistogo"
+output.credentials = $.create({username: $.username, password: $.password}) 

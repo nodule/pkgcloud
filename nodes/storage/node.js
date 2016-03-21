@@ -1,3 +1,1 @@
-output = {
-  client: pkgcloud.storage.createClient($.credentials)
-}
+output = { client: $.create(pkgcloud.storage.createClient($.credentials)) }

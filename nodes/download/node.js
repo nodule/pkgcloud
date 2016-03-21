@@ -1,3 +1,1 @@
-output = {
-  upload: client.upload($.options)
-}
+output = {upload: $.create(client.upload($.options))}

@@ -1,2 +1,1 @@
-output = input
-output.provider = "mongolab"
+output.credentials = $.create({username: $.username, password: $.password}) 

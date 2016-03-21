@@ -1,2 +1,1 @@
-output = input
-output.provider = "iriscouch"
+output.credentials = $.create({username: $.username, password: $.password})
