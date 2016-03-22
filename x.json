@@ -38,7 +38,7 @@
       "ns": "pkgcloud",
       "name": "amazon",
       "env": "server",
-      "fn": "output = input\noutput.provider = \"amazon\"\n"
+      "fn": "output.credentials = $.create({key: $.key, keyId: $.keyId,})\n"
     },
     {
       "ports": {
@@ -83,7 +83,7 @@
       "ns": "pkgcloud",
       "name": "compute",
       "env": "server",
-      "fn": "output = {\n  client: pkgcloud.compute.createClient(input.credentials)\n}\n"
+      "fn": "output = {client: $.create(pkgcloud.compute.createClient($.credentials))}\n"
     },
     {
       "ports": {
@@ -118,7 +118,7 @@
       "ns": "pkgcloud",
       "name": "createContainer",
       "env": "server",
-      "fn": "output = [client, 'createContainer', input.options]\n"
+      "fn": "output = [client, 'createContainer', $.options]\n"
     },
     {
       "ports": {
@@ -163,7 +163,7 @@
       "ns": "pkgcloud",
       "name": "createImage",
       "env": "server",
-      "fn": "output = [client, 'createImage', input.options]\n"
+      "fn": "output = [client, 'createImage', $.options]\n"
     },
     {
       "ports": {
@@ -228,7 +228,7 @@
       "ns": "pkgcloud",
       "name": "database",
       "env": "server",
-      "fn": "output = {\n  client: pkgcloud.database.createClient(input.credentials)\n}\n"
+      "fn": "output = {client: $.create(pkgcloud.database.createClient($.credentials))}\n"
     },
     {
       "ports": {
@@ -259,7 +259,7 @@
       "ns": "pkgcloud",
       "name": "destroyContainer",
       "env": "server",
-      "fn": "output = [client, 'destroyContainer', input.containerName]\n"
+      "fn": "output = [client, 'destroyContainer', $.containerName]\n"
     },
     {
       "ports": {
@@ -294,7 +294,7 @@
       "ns": "pkgcloud",
       "name": "destroyImage",
       "env": "server",
-      "fn": "output = [client, 'destroyImage', input.image]\n"
+      "fn": "output = [client, 'destroyImage', $.image]\n"
     },
     {
       "ports": {
@@ -329,7 +329,7 @@
       "ns": "pkgcloud",
       "name": "destroyServer",
       "env": "server",
-      "fn": "output = [client, 'destroyServer', input.server]\n"
+      "fn": "output = [client, 'destroyServer', $.server]\n"
     },
     {
       "dependencies": {
@@ -359,7 +359,7 @@
       "ns": "pkgcloud",
       "name": "dns",
       "env": "server",
-      "fn": "output = {\n  client: pkgcloud.dns.createClient(input.credentials)\n}\n"
+      "fn": "output = {client: $.create(pkgcloud.dns.createClient($.credentials))}\n"
     },
     {
       "ports": {
@@ -399,7 +399,7 @@
       "ns": "pkgcloud",
       "name": "download",
       "env": "server",
-      "fn": "output = {\n  upload: client.upload(input.options)\n}\n"
+      "fn": "output = {upload: $.create(client.upload($.options))}\n"
     },
     {
       "ports": {
@@ -434,7 +434,7 @@
       "ns": "pkgcloud",
       "name": "getContainer",
       "env": "server",
-      "fn": "output = [client, 'getContainer', input.containerName]\n"
+      "fn": "output = [client, 'getContainer', $.containerName]\n"
     },
     {
       "ports": {
@@ -504,7 +504,7 @@
       "ns": "pkgcloud",
       "name": "getFiles",
       "env": "server",
-      "fn": "output = [client, 'getFile', input.container, input.file]\n"
+      "fn": "output = [client, 'getFile', $.container, $.file]\n"
     },
     {
       "ports": {
@@ -539,7 +539,7 @@
       "ns": "pkgcloud",
       "name": "getFiles",
       "env": "server",
-      "fn": "output = [client, 'getFiles', input.container]\n"
+      "fn": "output = [client, 'getFiles', $.container]\n"
     },
     {
       "ports": {
@@ -574,7 +574,7 @@
       "ns": "pkgcloud",
       "name": "getFlavor",
       "env": "server",
-      "fn": "output = [client, 'getFlavor', input.flavor]\n"
+      "fn": "output = [client, 'getFlavor', $.flavor]\n"
     },
     {
       "ports": {
@@ -734,7 +734,7 @@
       "ns": "pkgcloud",
       "name": "getServer",
       "env": "server",
-      "fn": "output = [client, 'getServer', input.server]\n"
+      "fn": "output = [client, 'getServer', $.server]\n"
     },
     {
       "ports": {
@@ -824,7 +824,7 @@
       "ns": "pkgcloud",
       "name": "iriscouch",
       "env": "server",
-      "fn": "output = input\noutput.provider = \"iriscouch\"\n"
+      "fn": "output.credentials = $.create({username: $.username, password: $.password})\n"
     },
     {
       "ports": {
@@ -854,7 +854,7 @@
       "ns": "pkgcloud",
       "name": "joyent",
       "env": "server",
-      "fn": "output = input\noutput.provider = \"joyent\"\n"
+      "fn": "output.credentials = $.create({username: $.username, password: $.password})\n"
     },
     {
       "ports": {
@@ -884,7 +884,7 @@
       "ns": "pkgcloud",
       "name": "mongohq",
       "env": "server",
-      "fn": "output = input\noutput.provider = \"mongohq\"\n"
+      "fn": "output.credentials = $.create({username: $.username, password: $.password})\n"
     },
     {
       "ports": {
@@ -914,7 +914,7 @@
       "ns": "pkgcloud",
       "name": "mongolab",
       "env": "server",
-      "fn": "output = input\noutput.provider = \"mongolab\"\n"
+      "fn": "output.credentials = $.create({username: $.username, password: $.password}) \n"
     },
     {
       "ports": {
@@ -944,7 +944,7 @@
       "ns": "pkgcloud",
       "name": "rackspace",
       "env": "server",
-      "fn": "output = input\noutput.provider = \"rackspace\"\n"
+      "fn": "output.credentials = $.create({username: $.username, apiKey: $.apiKey}) \n"
     },
     {
       "ports": {
@@ -982,7 +982,7 @@
       "ns": "pkgcloud",
       "name": "rebootServer",
       "env": "server",
-      "fn": "output = [client, 'rebootServer', input.server, {\n  type: input.type\n}]\n"
+      "fn": "output = [client, 'rebootServer', $.server, {type: $.type}]\n"
     },
     {
       "ports": {
@@ -1012,7 +1012,7 @@
       "ns": "pkgcloud",
       "name": "redistogo",
       "env": "server",
-      "fn": "output = input\noutput.provider = \"redistogo\"\n"
+      "fn": "output.credentials = $.create({username: $.username, password: $.password}) \n"
     },
     {
       "ports": {
@@ -1048,7 +1048,7 @@
       "ns": "pkgcloud",
       "name": "removeFile",
       "env": "server",
-      "fn": "output = [client, 'removeFile', input.container, input.file]\n"
+      "fn": "output = [client, 'removeFile', $.container, $.file]\n"
     },
     {
       "dependencies": {
@@ -1078,7 +1078,7 @@
       "ns": "pkgcloud",
       "name": "storage",
       "env": "server",
-      "fn": "output = {\n  client: pkgcloud.storage.createClient(input.credentials)\n}\n"
+      "fn": "output = { client: $.create(pkgcloud.storage.createClient($.credentials)) }\n"
     },
     {
       "ports": {
@@ -1118,7 +1118,7 @@
       "ns": "pkgcloud",
       "name": "upload",
       "env": "server",
-      "fn": "output = {\n  upload: client.upload(input.options)\n}\n"
+      "fn": "output = {upload: $.create(client.upload($.options))}\n"
     }
   ],
   "twigs": [],
